@@ -1,0 +1,14 @@
+{
+  "name": "jest-starter",
+  "version": "1.0.0",
+  "description": "Starter project with sample Jest tests",
+  "main": "src/index.js",
+  "dependencies": {
+    "jest": "25.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": ["javascript", "starter", "jest", "test"]
+}
