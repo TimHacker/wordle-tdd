@@ -15,3 +15,11 @@ test("it can return five twos when everything matches (all the letters are in th
   const target = "ropes";
   expect(wordle(guess, target)).toBe("22222");
 });
+
+// Homework
+
+test("it can return four zeros and a one with single character match, wrong position", () => {
+  const guess = "ropes";
+  const target = "salty";
+  expect(wordle(guess, target)).toBe("00001");
+});
