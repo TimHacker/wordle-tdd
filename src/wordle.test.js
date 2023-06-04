@@ -10,7 +10,7 @@ test("it can return five zeros when there are no matches", () => {
 // We need to work if that's the best test to learn. (or should we do 00001)
 // Make it green!
 
-test("it can return five twos when everything matches (all the letters are in the correct position", () => {
+test("it can return five twos when everything matches (all the letters are in the correct position)", () => {
   const guess = "ropes";
   const target = "ropes";
   expect(wordle(guess, target)).toBe("22222");
