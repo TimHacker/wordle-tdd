@@ -30,8 +30,8 @@ test("it can return four zeros and a two with single character match, correct po
 //   [[42, Infinity], Infinity],
 // ])
 // 
-// test("it can return four zeros and a one with single character match, wrong position", () => {
-//   const guess = "ropes";
-//   const target = "salty";
-//  expect(wordle(guess, target)).toBe("00001");
-// });
+test("it can return four zeros and a one with single character match, wrong position", () => {
+  const guess = "ropes";
+  const target = "salty";
+  expect(wordle(guess, target)).toBe("00001");
+});

@@ -13,13 +13,20 @@ function wordle(guess, target) {
   // https://stackoverflow.com/questions/9329446/loop-for-each-over-an-array-in-javascript
   for (let i = 0; i < guessCharacters.length; i++) {
     let match = targetCharacters[i] === guessCharacters[i];
+
+    // check if target contains current guess character
+    // if so we add 1
     
     if (match) {
       result += "2";
-    } else {
+    } else if (target.includes(guessCharacters[i])) {
+      result += "1";
+    }
+      else {
       result += "0";
     }
   }
+  
 
 
 
