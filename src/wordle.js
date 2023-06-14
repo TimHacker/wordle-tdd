@@ -5,30 +5,18 @@ function wordle(guess, target) {
 
   let result = "";
 
-  console.log(guessCharacters, targetCharacters)
-
-
-  // Refactor!
-  // or https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-  // https://stackoverflow.com/questions/9329446/loop-for-each-over-an-array-in-javascript
-  for (let i = 0; i < guessCharacters.length; i++) {
-    let match = targetCharacters[i] === guessCharacters[i];
-
-    // check if target contains current guess character
-    // if so we add 1
-    
-    if (match) {
+  guessCharacters.forEach((currentGuessCharacter, i) => {
+      
+    const exactMatch = targetCharacters[i] === currentGuessCharacter;
+  
+    if (exactMatch) {
       result += "2";
-    } else if (target.includes(guessCharacters[i])) {
+    } else if (target.includes(currentGuessCharacter)) {
       result += "1";
-    }
-      else {
+    } else {
       result += "0";
     }
-  }
-  
-
-
+  });
 
   return result;
 }

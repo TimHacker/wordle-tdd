@@ -35,3 +35,15 @@ test("it can return four zeros and a one with single character match, wrong posi
   const target = "salty";
   expect(wordle(guess, target)).toBe("00001");
 });
+
+test("it can return 2 correct positions and 1 not in the right position", () => {
+  const guess = "braid";
+  const target = "break";
+  expect(wordle(guess, target)).toBe("22100");
+});
+
+test("it can return 1 correct positions and 2 not in the right position", () => {
+  const guess = "sores";
+  const target = "brass";
+  expect(wordle(guess, target)).toBe("10102");
+});
